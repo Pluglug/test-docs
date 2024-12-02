@@ -103,8 +103,6 @@ Blenderの任意のパネル/メニューにPMEアイテムをappend prependす�
     BlenderのすべてのUI要素にPME Toolsボタンが追加され、メニューIDを取得したりExtending Panelsなどを簡単に設定できる。
 ## Custom icon
 pie_menu_editor/iconにアイコン画像を格納しておくとPME内でカスタムアイコンとして利用できる
-## Auto Run
-pie_menu_editor/scripts/auto_runにスクリプトを格納すると、PME起動時に自動で実行される
 
 ---
 
@@ -112,18 +110,22 @@ pie_menu_editor/scripts/auto_runにスクリプトを格納すると、PME起動
 ## Terminology
 ## PME Scripting Reference
 ### Global Variables
-### Built-in Functions
-  <!-- - Property Types -->
-  <!-- - Event System -->
-  <!-- - Context System -->
+### Global Functions
+#### Common Functions
+#### Command Tab Functions
+#### Custom Tab Functions
+### Auto-run Scripts
+### Creating Custom Globals
 
 ---
 
 # Scripting Guide
-## Blender Basics
-  - Understanding Blender's UI
-  - Data Structure
-  - Operator System
+<!-- ## Blender Basics -->
+  <!-- - Understanding Blender's UI -->
+  <!-- - Data Structure -->
+  <!-- - Operator System -->
+  <!-- - Keymap System -->
+  <!-- - Poll System -->
 ## Python Essentials
   - Core Concepts
   - List Comprehensions
@@ -148,46 +150,18 @@ pie_menu_editor/scripts/auto_runにスクリプトを格納すると、PME起動
   - Scene Management
   - Property Management
   - Event Handling
+  - Leverage generative AI
 
-生成AIを使用した例
-
-- Script Collection
-    - Installation Guide
-    - Available Scripts
-    - Usage Instructions
-    - Contributing Guidelines
-- Knowledge Base
-    - Tips & Tricks
-    - Problem Solving
-    - Performance Tips
-    - Known Limitations
-
-
-<!-- 
-# Library (Advanced Resources)
-- Glossary
-- Scripting Reference
-    - Global Variables
-    - Built-in Functions
-- Community Scripts
-    - How to Use Scripts
-    - Script Library
-- Code Examples
-    - Menu Creation
-    - Custom Operations
-    - Event Processing
-- PMEを高度に使いこなすためのガイド
-    - 前書き
-    - Hotkeyを適切なKeymapに設定する
-    - Pollを使用する
-    - Introduction to Scripting
-        - Basic knowledge of Blender
-        - Basic Python
-            Pythonの基本やPMEで頻繁に使用する必要のある三項演算子やリスト内包表記をあつかう
-        - How to use bpy
-            高度なカスタマイズをするためのBlenderのcontext, data, ops, area, UIlayoutなどについての説明
-    - Practical Examples
--->
+## Script Collection
+  - Installation Guide
+  - Available Scripts
+  - Usage Instructions
+  - Contributing Guidelines
+## Knowledge Base
+  - Tips & Tricks
+  - Problem Solving
+  - Performance Tips
+  - Known Limitations
 
 ---
 
@@ -202,3 +176,45 @@ pie_menu_editor/scripts/auto_runにスクリプトを格納すると、PME起動
     (Hot!)ドキュメントの共同編集者募集(Githubなどでの貢献方法)
         Translation Help
 - Changelog
+
+
+pie_menu_editor_docs/
+├── .github/                      # GitHub関連
+│   ├── ISSUE_TEMPLATE/          # Issueテンプレート
+│   └── workflows/               # GitHub Actions（自動ビルド・デプロイ用）
+│       └── deploy.yml           # ドキュメントの自動デプロイ設定
+├── docs/                         # Sphinxドキュメント
+│   ├── source/                  # ドキュメントソースファイル
+│   │   ├── _static/            # 静的リソース（CSS/JSなど）
+│   │   ├── _templates/         # カスタムテンプレート
+│   │   ├── images/             # ドキュメント内で使用する画像
+│   │   ├── examples/           # 使用例ファイル（コード・設定など）
+│   │   ├── references/         # 参照資料
+│   │   ├── examples/           # コード例やチュートリアル
+│   │   ├── community/          # コミュニティリソース
+│   │   └── conf.py             # Sphinx設定ファイル
+│   ├── build/                   # ローカルビルド結果（Gitでは管理しない）
+│   └── Makefile                 # Sphinxビルド用Makefile
+├── images/                       # ドキュメント外で使用する画像
+│   ├── banners/                 # プロモーション用バナー
+│   └── icons/                   # アイコン素材
+├── patches/                      # パッチファイル
+│   ├── blender_4_0.patch        # Blender 4.0用のパッチ例
+│   └── pme_fixes.patch          # PMEバグ修正パッチ例
+├── scripts/                      # スクリプト配布用ディレクトリ
+│   ├── examples/                # 実例用スクリプト
+│   │   ├── basic/              # 基本的な例
+│   │   ├── practical/          # 実用的な例
+│   │   └── custom_operations/  # 高度なスクリプト例
+│   └── utilities/               # ユーティリティスクリプト
+├── tests/                        # テストスクリプト（任意、プロジェクト規模による）
+├── .gitignore                    # Gitの無視リスト
+├── CHANGELOG.md                  # 更新履歴
+├── CONTRIBUTING.md               # 貢献ガイドライン
+├── LICENSE                       # ライセンス情報
+├── README.md                     # プロジェクトの概要説明
+└── requirements.txt              # Python依存関係
+
+
+mkdir -p test-docs/{.github/{ISSUE_TEMPLATE,workflows},.vscode,scripts/{examples,utilities},patches/{blender,other},images,notebooks/examples,docs/source/{images,examples,references},tests}
+touch test-docs/{README.md,CHANGELOG.md,CONTRIBUTING.md,LICENSE,requirements.txt,.gitignore}
