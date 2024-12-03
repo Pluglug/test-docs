@@ -1,0 +1,52 @@
+Copyright © [roaoao], [2024]. All rights reserved.  
+This repository is dedicated to documenting, managing bugs, and distributing patches for the Blender addon "Pie Menu Editor (PME)," which remains the intellectual property of its original creator, roaoao.
+
+The contents of this repository are distributed under the following terms:
+
+1. **Documentation License**  
+   The documentation in this repository is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License.  
+   You are free to:
+   - **Share**: Copy and redistribute the material in any medium or format.
+   - **Adapt**: Remix, transform, and build upon the material.
+
+   Under the following terms:
+   - **Attribution**: You must give appropriate credit to this repository and its contributors.
+   - **NonCommercial**: You may not use the material for commercial purposes.
+   - **ShareAlike**: If you remix, transform, or build upon the material, you must distribute your contributions under the same license.
+
+2. **Patch License**  
+   The patches in this repository are provided under a limited-use license:
+   - They may be used exclusively for updating and maintaining the compatibility of PME with newer Blender versions.
+   - Redistribution of patches for commercial purposes is strictly prohibited without explicit written permission from the repository maintainers.
+
+3. **Contribution Agreement**  
+   By contributing to this repository, you agree to:
+   - Assign the copyright of your contributions to the repository maintainers for the purposes of maintaining, distributing, and potentially commercializing PME-related materials.
+   - Allow your contributions to be distributed under the licenses specified above.
+
+4. **Rights of the Repository Maintainers**  
+
+   **A. Donations and Support**  
+   - The repository maintainers may accept voluntary donations to support their maintenance and development efforts. These donations:  
+     - Are entirely voluntary and not tied to any specific deliverables.  
+     - Do not grant donors any additional rights or privileges.  
+     - Are used solely to support ongoing maintenance and documentation efforts.  
+
+   **B. Development Rights**  
+   - The maintainers may develop and distribute patches that:  
+     - Maintain compatibility with new Blender versions.  
+     - Address community-reported bugs and improve stability.  
+     - Add new features requested by the community.  
+
+   **C. Future Development**  
+   - The maintainers of this repository reserve the right to develop and distribute new tools or features inspired by PME under a separate license, including commercial licensing. This is permissible provided that:  
+     - Such tools or features do not directly replicate or redistribute roaoao's intellectual property.  
+     - They are clearly distinguished from the original PME content.  
+
+5. **Disclaimer**  
+   This repository and its maintainers are not affiliated with or endorsed by the original creator of Pie Menu Editor (roaoao).  
+   The patches and documentation provided are intended to support the community in maintaining compatibility and improving usability, but no guarantees are made regarding the functionality, safety, or legality of the software.
+   The maintenance work performed through this repository is conducted in good faith to support the existing user base of PME. If the original creator requests any modifications or removal of content, the repository maintainers will comply promptly.
+
+For more details about the licenses, visit:  
+- Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0): https://creativecommons.org/licenses/by-nc-sa/4.0/
