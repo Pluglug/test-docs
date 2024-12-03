@@ -1,4 +1,4 @@
-Copyright © [roaoao], [2024]. All rights reserved.  
+Copyright © 2024, Pluglug and PME Documentation Project Contributors. All rights reserved.
 This repository is dedicated to documenting, managing bugs, and distributing patches for the Blender addon "Pie Menu Editor (PME)," which remains the intellectual property of its original creator, roaoao.
 
 The contents of this repository are distributed under the following terms:
@@ -47,6 +47,9 @@ The contents of this repository are distributed under the following terms:
    This repository and its maintainers are not affiliated with or endorsed by the original creator of Pie Menu Editor (roaoao).  
    The patches and documentation provided are intended to support the community in maintaining compatibility and improving usability, but no guarantees are made regarding the functionality, safety, or legality of the software.
    The maintenance work performed through this repository is conducted in good faith to support the existing user base of PME. If the original creator requests any modifications or removal of content, the repository maintainers will comply promptly.
+
+6. **Contact**
+    For questions or concerns, please open an issue in this repository.
 
 For more details about the licenses, visit:  
 - Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0): https://creativecommons.org/licenses/by-nc-sa/4.0/
