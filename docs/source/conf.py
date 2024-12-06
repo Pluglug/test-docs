@@ -6,7 +6,7 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'pie_menu_editor_docs'
+project = 'Pie Menu Editor 1.18.7'
 copyright = '2024, Pluglug'
 author = 'Pluglug'
 # master_doc = 'getting_started'
