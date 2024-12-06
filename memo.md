@@ -1,15 +1,17 @@
-早速ドキュメントの構想にうつります。
-Blenderアドオン Pie Menu Editorのドキュメントを作成中です。
-まずは現在の構成からPMEの全容を理解してください。
-優れた構成にするためのアドバイスをお願いします。
+Original:
+https://archive.blender.org/wiki/2015/index.php/User:Raa/Addons/Pie_Menu_Editor/
 
+
+Document Design Proposal
+
+Pending due to need to consider compatibility with `PME_OT_docs`
 
 # Getting Started
 ## About Pie Menu Editor
 ## Installation
 ## Version Compatibility
   - Support for Blender 4.0+
-    関連: FAQ: How to Apply Patches
+    Related: FAQ: How to Apply Patches
 ## Current State & Contribution
 
 ---
@@ -30,7 +32,7 @@ Allows to create multi-column menus which can be called by using the assigned ho
 ### Pop-up Dialog Editor
 Allows to create a layout of widgets that can be displayed in pie menus, dialogs, panels or toolbars. (BPY.TYPES.PANEL)
 ### Sticky Key Editor
-Hotkeysを押したとき、または離したときに異なる動作を設定できます。一時的にツールやモードを有効化する際に便利です。
+Hotkeys can be set to have different actions when pressed or released, which is useful for temporarily activating a tool or mode.
 ### Stack Key Editor
 Allows to stack commands and cycle between them using the assigned hotkey.
 ### Macro Operator Editor
@@ -62,7 +64,7 @@ Allows to create custom properties (widgets).
       Python code that will be used to draw custom layout of widgets.
       `L.box().label(text, icon=icon, icon_value=icon_value)`
 #### Poll Method (Advanced Settings)
-(Advanced Settingsは各エディターごとに存在するが、Pollは共通のもので重要な要素)
+(Advanced Settings exist for each editor, but Poll is a common and important element.)
 
 ## UI Customization
 ### Panel Group (Side Panel Editor)
@@ -70,10 +72,11 @@ Allows to create a group of panels and add it to the new or existing category (t
 ### Hiding Unused Panels
 The editor allows to hide a group of panels.
 ### PME Toolbars (Pop-up Dialog Editor)
-BlenderのPreference Editorの領域を一定まで狭めると表示され、カスタムボタンを配置できる。Popup Daialogのメニュー名が” Toolbar Layout Left”などのときに識別される。
+This appears when you narrow the area of ​​Blender's Preference Editor to a certain extent, and you can place custom buttons. It can be identified when the menu name of the Popup Dialog is "Toolbar Layout Left" or similar.
 ### Menu/Panel Extension (Pop-up Dialog Editor/Regular Menu Editor)
-Blenderの任意のパネル/メニューにPMEアイテムをappend prependする。PME itemのメニュー名が” USERPREF_HT_header”などIDのときに識別される。
-関連: Interactive Panels Mode
+Appends or prepends a PME item to any panel/menu in Blender. It is identified when the menu name of the PME item is an ID such as "USERPREF_HT_header".
+Related: Interactive Panels Mode
+
 
 ## Adding Widgets
 ### RMB Context Menu
@@ -98,11 +101,11 @@ Blenderの任意のパネル/メニューにPMEアイテムをappend prependす�
  - PME Hotkeys
  ...
  - Debug Mode
-    info areaやコンソールで積極的にログを取得する
+    Actively log in the info area or console
  - Interactive Panels Mode
-    BlenderのすべてのUI要素にPME Toolsボタンが追加され、メニューIDを取得したりExtending Panelsなどを簡単に設定できる。
+    A PME Tools button has been added to all UI elements in Blender, making it easy to get menu IDs, set up Extending Panels, etc.
 ## Custom icon
-pie_menu_editor/iconにアイコン画像を格納しておくとPME内でカスタムアイコンとして利用できる
+If you store an icon image in pie_menu_editor/icon, you can use it as a custom icon in PME.
 
 ---
 
@@ -173,48 +176,40 @@ pie_menu_editor/iconにアイコン画像を格納しておくとPME内でカス
 - Contribute to PME
     Bug Reporting
     Script Sharing
-    (Hot!)ドキュメントの共同編集者募集(Githubなどでの貢献方法)
+    Contribute to the documentation
         Translation Help
 - Changelog
 
 
-pie_menu_editor_docs/
-├── .github/                      # GitHub関連
-│   ├── ISSUE_TEMPLATE/          # Issueテンプレート
-│   └── workflows/               # GitHub Actions（自動ビルド・デプロイ用）
-│       └── deploy.yml           # ドキュメントの自動デプロイ設定
-├── docs/                         # Sphinxドキュメント
-│   ├── source/                  # ドキュメントソースファイル
-│   │   ├── _static/            # 静的リソース（CSS/JSなど）
-│   │   ├── _templates/         # カスタムテンプレート
-│   │   ├── images/             # ドキュメント内で使用する画像
-│   │   ├── examples/           # 使用例ファイル（コード・設定など）
-│   │   ├── references/         # 参照資料
-│   │   ├── examples/           # コード例やチュートリアル
-│   │   ├── community/          # コミュニティリソース
-│   │   └── conf.py             # Sphinx設定ファイル
-│   ├── build/                   # ローカルビルド結果（Gitでは管理しない）
-│   └── Makefile                 # Sphinxビルド用Makefile
-├── images/                       # ドキュメント外で使用する画像
-│   ├── banners/                 # プロモーション用バナー
-│   └── icons/                   # アイコン素材
-├── patches/                      # パッチファイル
-│   ├── blender_4_0.patch        # Blender 4.0用のパッチ例
-│   └── pme_fixes.patch          # PMEバグ修正パッチ例
-├── scripts/                      # スクリプト配布用ディレクトリ
-│   ├── examples/                # 実例用スクリプト
-│   │   ├── basic/              # 基本的な例
-│   │   ├── practical/          # 実用的な例
-│   │   └── custom_operations/  # 高度なスクリプト例
-│   └── utilities/               # ユーティリティスクリプト
-├── tests/                        # テストスクリプト（任意、プロジェクト規模による）
-├── .gitignore                    # Gitの無視リスト
-├── CHANGELOG.md                  # 更新履歴
-├── CONTRIBUTING.md               # 貢献ガイドライン
-├── LICENSE                       # ライセンス情報
-├── README.md                     # プロジェクトの概要説明
-└── requirements.txt              # Python依存関係
-
-
-mkdir -p test-docs/{.github/{ISSUE_TEMPLATE,workflows},.vscode,scripts/{examples,utilities},patches/{blender,other},images,notebooks/examples,docs/source/{images,examples,references},tests}
-touch test-docs/{README.md,CHANGELOG.md,CONTRIBUTING.md,LICENSE,requirements.txt,.gitignore}
+pme_docs/
+├── .github/
+│   ├── ISSUE_TEMPLATE/
+│   └── workflows/
+│       └── deploy.yml
+├── docs/
+│   ├── source/
+│   │   ├── _static/
+│   │   ├── _templates/
+│   │   ├── images/
+│   │   ├── examples/
+│   │   ├── references/
+│   │   ├── examples/
+│   │   ├── community/
+│   │   └── conf.py
+│   ├── build/
+│   └── Makefile
+├── images/
+│   ├── banners/
+│   └── icons/
+├── patches/
+│   └── pme_fixes.patch
+├── scripts/
+│   ├── examples/
+│   └── utilities/
+├── tests/
+├── .gitignore
+├── CHANGELOG.md
+├── CONTRIBUTING.md
+├── LICENSE
+├── README.md
+└── requirements.txt
