@@ -6,76 +6,31 @@
 Pie Menu Editor Documentation
 =============================
 
-``This is a test PME Document.``
-
-Welcome to the Pie Menu Editor documentation! This documentation is intended to help you get started with Pie Menu Editor, learn how to use it, and customize it to your needs. If you have any questions or need help, please visit the `support & community <support_community/support>`_ section.
+This is a test PME Document.
+---------------------------
 
 Add your content using ``reStructuredText`` syntax. See the
 `reStructuredText <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`_
 documentation for details.
 
 
+.. Welcome to the Pie Menu Editor documentation! This documentation is intended to help you get started with Pie Menu Editor, learn how to use it, and customize it to your needs. If you have any questions or need help, please visit the `support & community <support_community/support>`_ section.
+
+The Pie Menu Editor (PME) is an add-on for Blender that allows users to create 
+custom menus, dialogs, and various UI elements to streamline their workflow.
+If you have any questions or need help, please visit the `support & community <support_community/support>`_ section.
+
 Documentation
 -------------
 
 .. toctree::
    :maxdepth: 2
-   :caption: Getting Started
+   :caption: Contents:
 
-   getting_started/about
-   getting_started/installation
-   getting_started/version_compatibility
-   getting_started/contribution
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Basic Usage Guide
-
-   basic_usage/tutorial
-   basic_usage/first_menu
-   basic_usage/common_use_cases
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Customization & Editors
-
-   customization/editors
-   customization/ui_customization
-   customization/adding_widgets
-   customization/settings
-   customization/custom_icons
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Reference
-
-   reference/terminology
-   reference/scripting
-   reference/globals
-   reference/functions
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Scripting Guide
-
-   scripting_guide/python_basics
-   scripting_guide/bpy_guide
-   scripting_guide/examples
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Examples & Community Resources
-
-   examples_resources/examples_basic
-   examples_resources/examples_practical
-   examples_resources/script_collection
-   examples_resources/knowledge_base
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Support & Community
-
-   support_community/support
-   support_community/faq
-   support_community/issues
-   support_community/contributing
+   getting_started/index
+   basic_usage_guide/index
+   customization_editors/index
+   reference/index
+   scripting_guide/index
+   examples_community_resources/index
+   support_community/index
