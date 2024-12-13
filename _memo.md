@@ -506,3 +506,123 @@ pme_docs/
 ├── LICENSE
 ├── README.md
 └── requirements.txt
+
+
+
+
+
+
+
+
+
+
+
+以下は、Sphinxで`.rst`ファイルを作成する際に、最低限押さえておくべき基本的な記述ルールと、`index.rst`および各ドキュメントページで記載すべき最低限の要点です。
+
+## 基本的な記述ルール
+
+- **タイトル行**:  
+  各`.rst`ファイルの先頭に、ドキュメントのタイトルを設定します。  
+  推奨書式：  
+  ```
+  Title of the Document
+  =====================
+  ```
+  上線(=)で区切ることでH1相当のタイトルになります。  
+  （セクションタイトルは下線`---`や`~~~`などで区切る）
+
+- **toctreeディレクティブ**:  
+  `index.rst`や各階層の目次ページ(`index.rst`)には、`toctree`ディレクティブを使って下位のドキュメントを一覧化します。  
+  ```
+  .. toctree::
+     :maxdepth: 2
+     :caption: セクション名（任意）
+
+     subpage_1
+     subpage_2
+     ...
+  ```
+
+- **言語設定 (必要に応じて)**:  
+  多言語対応や特定の言語記法は`conf.py`で行いますが、基本はUTF-8エンコーディングで書いていれば問題ありません。
+
+## index.rstに最低限書くべきこと
+
+### ルートのindex.rst（プロジェクトのトップレベル）
+
+- プロジェクト全体のタイトル
+- プロジェクトの簡単な説明 (1〜2行程度で良い)
+- トップレベルセクションへのリンク（`toctree`でサブディレクトリの`index.rst`を列挙）
+
+例:
+```rst
+Pie Menu Editor Documentation
+=============================
+
+This documentation provides an overview of the Pie Menu Editor add-on.
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents
+
+   getting_started/index
+   basic_usage_guide/index
+   customization_editors/index
+   reference/index
+   scripting_guide/index
+   examples_community_resources/index
+   support_community/index
+```
+
+### 各セクション階層のindex.rst
+
+- セクションタイトル
+- そのセクションの概要説明（1〜3行程度）
+- 下位ドキュメントへの`toctree`によるリンク列挙
+
+例（`getting_started/index.rst`）:
+```rst
+Getting Started
+===============
+
+Basic steps to install and start using Pie Menu Editor.
+
+.. toctree::
+   :maxdepth: 1
+
+   about_pme
+   installation
+```
+
+## 各rstページに最低限書くべきこと
+
+- タイトル（H1相当）
+- 該当トピックの短い要約説明（1〜3行）
+- 本文（必要な範囲で詳細な解説、手順、コード例など）
+- 他のドキュメントへの相対参照 (必要に応じて)
+
+例（`getting_started/about_pme.rst`）:
+```rst
+About Pie Menu Editor
+=====================
+
+The Pie Menu Editor (PME) is an add-on for Blender that allows users to create 
+custom menus, dialogs, and various UI elements to streamline their workflow.
+
+Key features:
+- Create custom pie menus
+- Configure hotkeys for rapid access
+- Extend Blender's UI through pop-up dialogs and more
+
+For installation details, see :doc:`installation`.
+```
+
+`doc`ロールを使うと`toctree`で指定した別ドキュメントへのリンクが簡単にできます（`installation.rst`への参照等）。
+
+## まとめ
+
+- **index.rst(トップレベル)**：プロジェクトタイトル + 全体目次(`toctree`)  
+- **各セクション用index.rst**：セクションタイトル + 簡単な概要 + 下位ページ列挙(`toctree`)  
+- **各コンテンツ用rst**：タイトル + 概要 + 本文 + 必要な場合の相互参照
+
+この最低限のルールと構成を守れば、Sphinxでのビルド時にナビゲーションが自然に形成され、スクリプト側からも予測可能なパスでアクセスできるようになります。
