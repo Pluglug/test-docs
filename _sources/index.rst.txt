@@ -25,7 +25,6 @@ Documentation
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
 
    getting_started/index
    basic_usage_guide/index

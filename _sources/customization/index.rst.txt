@@ -6,6 +6,7 @@ Main Topics
 
 .. toctree::
    :maxdepth: 2
+   :caption: Customization
 
     editors/index
     adding_widgets
