@@ -1,4 +1,9 @@
-Python Essentials
-=================
+// Description: Scripting Guide
 
-Here we will cover the basics of Python programming language.
+.. toctree::
+    :maxdepth: 2
+    :caption: Scripting Guide
+
+    python_essentioals
+    bpy_guide
+    
