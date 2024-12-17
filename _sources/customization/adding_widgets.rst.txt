@@ -1,4 +1,3 @@
-.. _adding_widgets:
 
 Adding Widgets
 ==============

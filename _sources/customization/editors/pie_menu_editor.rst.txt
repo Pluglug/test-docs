@@ -1,4 +1,3 @@
-.. _pie_menu_editor:
 
 Pie Menu Editor
 ===============

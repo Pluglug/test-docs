@@ -1,4 +1,3 @@
-.. _index:
 
 Customization Documentation
 ===========================

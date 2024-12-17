@@ -1,4 +1,3 @@
-.. _macro_operator_editor:
 
 Macro Operator Editor
 =====================
