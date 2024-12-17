@@ -1,4 +1,3 @@
-.. _settings:
 
 Settings
 --------
