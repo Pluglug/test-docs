@@ -1,4 +1,4 @@
-.. _index:
+.. _getting-started-index:
 
 Getting Started
 ===============
