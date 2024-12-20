@@ -1,3 +1,5 @@
+.. _basic-usage-guide-index:
+
 Quick Tutorial
 ==============
 

@@ -1,3 +1,4 @@
+.. _practical:
 
 Practical Examples
 ------------------

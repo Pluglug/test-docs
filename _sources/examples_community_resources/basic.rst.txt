@@ -1,3 +1,4 @@
+.. _basic:
 
 Basic Examples
 --------------

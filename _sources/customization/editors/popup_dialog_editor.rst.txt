@@ -1,3 +1,4 @@
+.. _popup_dialog_editor:
 
 Popup Dialog Editor
 ====================

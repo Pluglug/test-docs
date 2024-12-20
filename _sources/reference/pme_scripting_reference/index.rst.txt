@@ -1,12 +1,10 @@
+.. _pme-scripting-reference-index:
+
 PME Scripting Reference
 ========================
 
-.. toctree::
-   :maxdepth: 1
-
-    global_variables
-    command_tab_functions
-    custom_tab_functions
-    auto_run_scripts
-    createing_custom_globals
-    
+.. include:: global_variables.rst
+.. include:: command_tab_functions.rst
+.. include:: custom_tab_functions.rst
+.. include:: auto_run_scripts.rst
+.. include:: createing_custom_globals.rst

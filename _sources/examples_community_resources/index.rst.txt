@@ -1,3 +1,4 @@
+.. _examples_community_resources:
 
 Examples and Community Resources
 =================================

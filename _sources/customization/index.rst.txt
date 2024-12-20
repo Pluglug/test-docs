@@ -1,3 +1,4 @@
+.. _customization-index:
 
 Customization Documentation
 ===========================
