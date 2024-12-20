@@ -1,3 +1,4 @@
+.. _stack_key_editor:
 
 Stack Key Editor
 ================

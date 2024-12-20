@@ -1,3 +1,4 @@
+.. _property_editor:
 
 Property Editor
 ===============

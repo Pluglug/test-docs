@@ -1,3 +1,4 @@
+.. _sticky_key_editor:
 
 Sticky Key Editor
 =================
