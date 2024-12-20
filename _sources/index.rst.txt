@@ -25,11 +25,42 @@ Documentation
 
 .. toctree::
    :maxdepth: 2
+   :caption: Getting Started
 
    getting_started/index
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Basic Usage Guide
+
    basic_usage/index
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Customization
+
    customization/index
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Reference
+
    reference/index
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Scripting Guide
+
    scripting_guide/index
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Examples & Community Resources
+
    examples_community_resources/index
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Support & Community
+
    support_community/index

@@ -8,8 +8,8 @@ Main Topics
    :maxdepth: 2
    :caption: Customization
 
-    editors/index
-    adding_widgets
-    ui_customization
-    custom_icons
-    settings
+   editors/index
+   adding_widgets
+   ui_customization
+   custom_icons
+   settings
