@@ -27,8 +27,8 @@ Documentation
    :maxdepth: 2
 
    getting_started/index
-   basic_usage_guide/index
-   customization_editors/index
+   basic_usage/index
+   customization/index
    reference/index
    scripting_guide/index
    examples_community_resources/index
