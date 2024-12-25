@@ -17,7 +17,7 @@ documentation for details.
 .. toctree::
    :maxdepth: 2
    :caption: Getting Started
-   getting_started/about_pme
+
    getting_started/installation
    basic_usage/quick_tutorial/index
 
@@ -66,9 +66,3 @@ documentation for details.
    support_community/get_support
    support_community/contribute_to_pme
    support_community/changelog
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`search`
