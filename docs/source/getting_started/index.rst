@@ -3,6 +3,8 @@
 About PME
 =========
 
+.. note:: Discontinued Pages
+
 .. image:: /_static/images/pme_logo.webp
    :alt: Pie Menu Editor Logo
    :align: center

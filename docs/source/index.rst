@@ -17,10 +17,8 @@ documentation for details.
    :maxdepth: 2
    :caption: Getting Started
    getting_started/about_pme
-
-   basic_usage/quick_tutorial
-   basic_usage/create_first_menu
-   basic_usage/common_use_cases
+   getting_started/installation
+   basic_usage/quick_tutorial/index
 
 .. toctree::
    :maxdepth: 2

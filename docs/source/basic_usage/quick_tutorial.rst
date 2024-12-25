@@ -1,6 +1,6 @@
 .. _quick_tutorial:
 
-Quick Tutorial
-==============
+UI Overview
+-----------
 
 This is a test PME Document.
