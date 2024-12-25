@@ -8,6 +8,6 @@ Learn Scripting
 .. toctree::
     :maxdepth: 2
 
-    python_essentioals
+    python_essentials
     bpy_guide
     
