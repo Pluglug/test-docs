@@ -6,7 +6,7 @@ Customization Documentation
 Main Topics
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: Customization
 
    editors/index

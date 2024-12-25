@@ -3,9 +3,5 @@
 Getting Started
 ===============
 
-.. toctree::
-   :maxdepth: 1
-   :caption: Getting Started
-
-   about_pme
-   installation
+.. include:: getting_started/about_pme.rst
+.. include:: getting_started/installation.rst

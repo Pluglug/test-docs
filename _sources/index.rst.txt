@@ -17,7 +17,7 @@ custom menus, dialogs, and various UI elements to streamline their workflow.
 If you have any questions or need help, please visit the `support & community <support_community/support>`_ section.
 
 Features
-========
+--------
 
 .. container:: grid-container
 
@@ -56,6 +56,8 @@ Features
       Create and customize pie menus with an intuitive
       graphical interface. Support for multiple layouts,
       custom icons, and dynamic menus.
+
+
 
 
 .. toctree::
