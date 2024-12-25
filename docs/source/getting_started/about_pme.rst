@@ -3,7 +3,7 @@
 About Pie Menu Editor
 =====================
 
-.. image:: images/pme_logo.webp
+.. image:: _static/images/pme_logo.png
    :alt: Pie Menu Editor Logo
    :align: center
 
