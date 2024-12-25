@@ -19,7 +19,7 @@ documentation for details.
    :caption: Getting Started
 
    getting_started/installation
-   basic_usage/index
+   basic_usage/quick_tutorial
 
 .. toctree::
    :maxdepth: 2
