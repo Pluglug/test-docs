@@ -3,11 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Pie Menu Editor Documentation
-=============================
-
-This is a test PME Document.
----------------------------
+Pie Menu Editor
 
 Add your content using ``reStructuredText`` syntax. See the
 `reStructuredText <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`_
@@ -20,8 +16,47 @@ The Pie Menu Editor (PME) is an add-on for Blender that allows users to create
 custom menus, dialogs, and various UI elements to streamline their workflow.
 If you have any questions or need help, please visit the `support & community <support_community/support>`_ section.
 
-Documentation
--------------
+Features
+========
+
+.. container:: grid-container
+
+   .. container:: feature-box
+
+      .. rubric:: Pie Menu Editor
+         :class: feature-title
+
+      Create and customize pie menus with an intuitive
+      graphical interface. Support for multiple layouts,
+      custom icons, and dynamic menus.
+
+   .. container:: feature-box
+
+      .. rubric:: Regular Menu Editor
+         :class: feature-title
+
+      Create and customize pie menus with an intuitive
+      graphical interface. Support for multiple layouts,
+      custom icons, and dynamic menus.
+
+   .. container:: feature-box
+   
+      .. rubric:: Popup Dialog Editor
+         :class: feature-title
+
+      Create and customize pie menus with an intuitive
+      graphical interface. Support for multiple layouts,
+      custom icons, and dynamic menus.
+
+   .. container:: feature-box
+
+      .. rubric:: Macro Editor
+         :class: feature-title
+
+      Create and customize pie menus with an intuitive
+      graphical interface. Support for multiple layouts,
+      custom icons, and dynamic menus.
+
 
 .. toctree::
    :maxdepth: 2
