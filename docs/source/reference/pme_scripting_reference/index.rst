@@ -1,7 +1,9 @@
 .. _pme-scripting-reference-index:
 
-PME Scripting Reference
-========================
+Scripting
+=========
+
+(WIP)
 
 .. include:: global_variables.rst
 .. include:: command_tab_functions.rst
