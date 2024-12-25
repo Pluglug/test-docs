@@ -1,10 +1,4 @@
 .. _about-pme:
-
-Pie Menu Editor Fork
-====================
-
-(WIP)
-
 About
 -----
 
@@ -16,6 +10,8 @@ The Pie Menu Editor (PME) is an add-on for Blender that allows users to create
 custom menus, dialogs, and various UI elements to streamline their workflow.
 If you have any questions or need help, please visit the `support & community <support_community/get_support>`_ page.
 
+
+.. _feature-overview:
 Feature Overview
 ----------------
 
@@ -56,5 +52,3 @@ Feature Overview
       Create and customize pie menus with an intuitive
       graphical interface. Support for multiple layouts,
       custom icons, and dynamic menus.
-
-.. include:: getting_started/installation.rst
