@@ -1,15 +1,16 @@
 .. _customization-index:
 
-Customization Documentation
-===========================
+Customization
+=============
 
-Main Topics
+(WIP)
+
+.. include:: editors/index.rst
 
 .. toctree::
    :maxdepth: 3
    :caption: Customization
 
-   editors/index
    adding_widgets
    ui_customization
    custom_icons

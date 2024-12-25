@@ -1,11 +1,9 @@
-.. _index:
+.. _editors-index:
 
-Editors Documentation
-=====================
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Editors
 
    pie_menu_editor
    regular_menu_editor
