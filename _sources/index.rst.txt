@@ -12,13 +12,12 @@ Add your content using ``reStructuredText`` syntax. See the
 `reStructuredText <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`_
 documentation for details.
 
-.. include:: getting_started/about_pme.rst
 
 .. toctree::
    :maxdepth: 2
    :caption: Getting Started
+   getting_started/about_pme
 
-   getting_started/installation
    basic_usage/quick_tutorial
    basic_usage/create_first_menu
    basic_usage/common_use_cases
@@ -44,15 +43,11 @@ documentation for details.
 
 .. toctree::
    :maxdepth: 2
-   :caption: Scripting
+   :caption: Reference
 
-   scripting_guide/python_essentials
-   scripting_guide/bpy_guide
-   reference/pme_scripting_reference/global_variables
-   reference/pme_scripting_reference/global_functions
-   reference/pme_scripting_reference/auto_run_scripts
-   reference/pme_scripting_reference/creating_custom_globals
    reference/terminology
+   reference/pme_scripting_reference/index
+   scripting_guide/index
 
 .. toctree::
    :maxdepth: 2
