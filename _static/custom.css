@@ -9,13 +9,13 @@
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 20px;
-    background: #e7e7e7;
+    background: #fff;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .feature-title {
-    color: #31160e;
+    color: #2980b9;
     font-size: 1.2em;
     margin-bottom: 10px;
-    background: #d3ccc9;
+    background: #fff;
 }

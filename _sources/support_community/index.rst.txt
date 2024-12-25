@@ -1,4 +1,14 @@
-Get Support
-===========
+.. _support-community-index:
 
-`Pie Menu Editor Community <http://blenderartists.org/forum/showthread.php?392910>`_ - Ask questions, share your pie menus, and get help from the community.
+Support & Community
+===================
+
+.. include:: get_support.rst
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Support & Community
+
+   get_support
+   contribute_to_pme
+   report_issue
