@@ -9,7 +9,7 @@
 project = 'Pie Menu Editor 1.18.7'
 copyright = '2024, Pluglug'
 author = 'Pluglug'
-master_doc = 'getting_started/about_pme'
+# master_doc = 'getting_started/about_pme'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
