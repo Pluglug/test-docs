@@ -1,6 +1,6 @@
 .. _installation:
 
-installation
+Installation
 ============
 
 (WIP)
