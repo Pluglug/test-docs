@@ -36,7 +36,7 @@ Documentation
    basic_usage/index
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: Customization
 
    customization/index
