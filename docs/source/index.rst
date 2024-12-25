@@ -3,96 +3,78 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Pie Menu Editor
+Welcome to PME Documentation
+============================
+
+.. note:: This is a placeholder document.
 
 Add your content using ``reStructuredText`` syntax. See the
 `reStructuredText <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`_
 documentation for details.
 
-
-.. Welcome to the Pie Menu Editor documentation! This documentation is intended to help you get started with Pie Menu Editor, learn how to use it, and customize it to your needs. If you have any questions or need help, please visit the `support & community <support_community/support>`_ section.
-
-The Pie Menu Editor (PME) is an add-on for Blender that allows users to create 
-custom menus, dialogs, and various UI elements to streamline their workflow.
-If you have any questions or need help, please visit the `support & community <support_community/support>`_ section.
-
-Features
---------
-
-.. container:: grid-container
-
-   .. container:: feature-box
-
-      .. rubric:: Pie Menu Editor
-         :class: feature-title
-
-      Create and customize pie menus with an intuitive
-      graphical interface. Support for multiple layouts,
-      custom icons, and dynamic menus.
-
-   .. container:: feature-box
-
-      .. rubric:: Regular Menu Editor
-         :class: feature-title
-
-      Create and customize pie menus with an intuitive
-      graphical interface. Support for multiple layouts,
-      custom icons, and dynamic menus.
-
-   .. container:: feature-box
-   
-      .. rubric:: Popup Dialog Editor
-         :class: feature-title
-
-      Create and customize pie menus with an intuitive
-      graphical interface. Support for multiple layouts,
-      custom icons, and dynamic menus.
-
-   .. container:: feature-box
-
-      .. rubric:: Macro Editor
-         :class: feature-title
-
-      Create and customize pie menus with an intuitive
-      graphical interface. Support for multiple layouts,
-      custom icons, and dynamic menus.
-
-
-
+.. include:: getting_started/about_pme.rst
 
 .. toctree::
    :maxdepth: 2
    :caption: Getting Started
 
-   getting_started/index
-   basic_usage/index
-
-.. toctree::
-   :maxdepth: 3
-   :caption: Customization
-
-   customization/index
+   getting_started/installation
+   basic_usage/quick_tutorial
+   basic_usage/create_first_menu
+   basic_usage/common_use_cases
 
 .. toctree::
    :maxdepth: 2
-   :caption: Reference
+   :caption: Editors
 
-   reference/index
+   customization/editors/pie_menu_editor
+   customization/editors/regular_menu_editor
+   customization/editors/popup_dialog_editor
+   customization/editors/sticky_key_editor
+   customization/editors/stack_key_editor
+   customization/editors/modal_operator_editor
+   customization/editors/macro_operator_editor
+   customization/editors/property_editor
+   customization/editors/editor_common_elements
+
+   customization/ui_customization
+   customization/adding_widgets
+   customization/settings
+   customization/custom_icon
 
 .. toctree::
    :maxdepth: 2
-   :caption: Scripting Guide
+   :caption: Scripting
 
-   scripting_guide/index
+   scripting_guide/python_essentials
+   scripting_guide/bpy_guide
+   reference/pme_scripting_reference/global_variables
+   reference/pme_scripting_reference/global_functions
+   reference/pme_scripting_reference/auto_run_scripts
+   reference/pme_scripting_reference/creating_custom_globals
+   reference/terminology
 
 .. toctree::
    :maxdepth: 2
-   :caption: Examples & Community Resources
+   :caption: Examples & Resources
 
-   examples_community_resources/index
+   examples/basic
+   examples/practical
+   examples/script_collection
+   examples/knowledge_base
 
 .. toctree::
    :maxdepth: 2
    :caption: Support & Community
 
-   support_community/index
+   support_community/faq
+   support_community/known_issues
+   support_community/get_support
+   support_community/contribute_to_pme
+   support_community/changelog
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`search`

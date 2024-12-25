@@ -1,3 +1,5 @@
+.. _quick_tutorial:
+
 Quick Tutorial
 ==============
 
