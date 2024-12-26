@@ -1,3 +1,4 @@
+/* _static/custom.css */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -6,16 +7,50 @@
 }
 
 .feature-box {
+    display: flex;
+    gap: 20px;
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 20px;
     background: #fff;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+
+.feature-content {
+    flex: 1;
+}
+
+.feature-preview {
+    width: 150px;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.feature-preview img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .feature-title {
     color: #2980b9;
     font-size: 1.2em;
     margin-bottom: 10px;
-    background: #fff;
+}
+
+.feature-box:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* ダークモード対応 */
+@media (prefers-color-scheme: dark) {
+    .feature-box {
+        background: #2d2d2d;
+        border-color: #404040;
+    }
 }

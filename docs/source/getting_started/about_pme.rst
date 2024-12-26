@@ -12,6 +12,7 @@ If you have any questions or need help, please visit the `support & community <s
 
 
 .. _feature-overview:
+
 Feature Overview
 ----------------
 
@@ -19,36 +20,42 @@ Feature Overview
 
    .. container:: feature-box
 
-      .. rubric:: Pie Menu Editor
-         :class: feature-title
+      .. raw:: html
+         <a href="editors/pie_menu_editor.html" class="feature-box">
 
-      Create and customize pie menus with an intuitive
-      graphical interface. Support for multiple layouts,
-      custom icons, and dynamic menus.
+      .. container:: feature-content
 
-   .. container:: feature-box
+         .. rubric:: Pie Menu Editor
+            :class: feature-title
 
-      .. rubric:: Regular Menu Editor
-         :class: feature-title
+         Create and customize pie menus with an intuitive
+         graphical interface. Support for multiple layouts,
+         custom icons, and dynamic menus.
 
-      Create and customize pie menus with an intuitive
-      graphical interface. Support for multiple layouts,
-      custom icons, and dynamic menus.
+      .. container:: feature-preview
 
-   .. container:: feature-box
-   
-      .. rubric:: Popup Dialog Editor
-         :class: feature-title
+         .. image:: /images/features/pie_menu_demo.gif
+            :alt: Pie Menu Demo
 
-      Create and customize pie menus with an intuitive
-      graphical interface. Support for multiple layouts,
-      custom icons, and dynamic menus.
+      .. raw:: html
+         </a>
 
    .. container:: feature-box
 
-      .. rubric:: Macro Editor
-         :class: feature-title
+      .. raw:: html
+         <a href="editors/regular_menu_editor.html" class="feature-box">
 
-      Create and customize pie menus with an intuitive
-      graphical interface. Support for multiple layouts,
-      custom icons, and dynamic menus.
+      .. container:: feature-content
+
+         .. rubric:: Regular Menu Editor
+            :class: feature-title
+
+         Design traditional dropdown menus with advanced features...
+
+      .. container:: feature-preview
+
+         .. image:: /images/features/regular_menu_demo.gif
+            :alt: Regular Menu Demo
+
+      .. raw:: html
+         </a>
