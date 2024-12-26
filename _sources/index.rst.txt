@@ -36,7 +36,6 @@ documentation for details.
    customization/editors/editor_common_elements
 
    customization/ui_customization
-   customization/adding_widgets
    customization/settings
    customization/custom_icon
 
