@@ -1,14 +1,15 @@
-/* _static/custom.css */
 .grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    flex-direction: column;
     gap: 20px;
     padding: 20px;
+    max-width: 900px;  /* コンテンツの最大幅を制限 */
+    margin: 0 auto;    /* 中央寄せ */
 }
 
 .feature-box {
     display: flex;
-    gap: 20px;
+    gap: 30px;
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 20px;
@@ -22,17 +23,18 @@
 
 .feature-content {
     flex: 1;
+    min-width: 300px;  /* テキストエリアの最小幅 */
 }
 
 .feature-preview {
-    width: 150px;
-    overflow: hidden;
-    border-radius: 4px;
+    width: 400px;      /* GIFの幅を固定 */
+    flex-shrink: 0;    /* GIFのサイズを維持 */
 }
 
 .feature-preview img {
     width: 100%;
     height: auto;
+    border-radius: 4px;
     display: block;
 }
 
@@ -46,11 +48,3 @@
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
-
-/* Dark mode */
-/* @media (prefers-color-scheme: dark) {
-    .feature-box {
-        background: #2d2d2d;
-        border-color: #404040;
-    }
-} */
