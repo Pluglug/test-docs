@@ -47,10 +47,10 @@
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-/* ダークモード対応 */
-@media (prefers-color-scheme: dark) {
+/* Dark mode */
+/* @media (prefers-color-scheme: dark) {
     .feature-box {
         background: #2d2d2d;
         border-color: #404040;
     }
-}
+} */
