@@ -18,30 +18,38 @@ Feature Overview
 
 .. container:: grid-container
 
+   .. raw:: html
+      <a href="
+
+   :doc:`customization/editors/pie_menu_editor`
+
+   .. raw:: html
+      " class="feature-box">
+
+   .. container:: feature-content
+
+      .. rubric:: Pie Menu Editor
+         :class: feature-title
+
+      Allows to create nested pie menus with 8+ buttons.
+
+   .. container:: feature-preview
+
+      .. image:: /images/features/pie_menu_demo.gif
+         :alt: Pie Menu Demo
+
+   .. raw:: html
+      </a>
+
    .. container:: feature-box
 
       .. raw:: html
-         <a href="customization/editors/pie_menu_editor.html" class="feature-box">
+         <a href="
 
-      .. container:: feature-content
-
-         .. rubric:: Pie Menu Editor
-            :class: feature-title
-
-         Allows to create nested pie menus with 8+ buttons.
-
-      .. container:: feature-preview
-
-         .. image:: /images/features/pie_menu_demo.gif
-            :alt: Pie Menu Demo
+      :doc:`customization/editors/regular_menu_editor`
 
       .. raw:: html
-         </a>
-
-   .. container:: feature-box
-
-      .. raw:: html
-         <a href="customization/editors/regular_menu_editor.html" class="feature-box">
+         " class="feature-box">
 
       .. container:: feature-content
 
