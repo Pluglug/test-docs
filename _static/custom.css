@@ -1,34 +1,34 @@
 .grid-container {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
     padding: 20px;
-    max-width: 900px;  /* コンテンツの最大幅を制限 */
+    width: min(95%, 900px); /* より柔軟な最大幅 */
     margin: 0 auto;    /* 中央寄せ */
 }
 
 .feature-box {
     display: flex;
     gap: 30px;
-    border: 1px solid #ddd;
+    border: 1px solid #c7c6dc;
     border-radius: 8px;
     padding: 20px;
-    background: #fff;
+    background: #eaeaec;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     transition: all 0.3s ease;
     cursor: pointer;
     text-decoration: none;
     color: inherit;
+    flex-wrap: wrap; /* 小画面で折り返し */
 }
 
 .feature-content {
-    flex: 1;
-    min-width: 300px;  /* テキストエリアの最小幅 */
+    flex: 1 1 250px; /* より柔軟な伸縮 */
 }
 
 .feature-preview {
-    width: 400px;      /* GIFの幅を固定 */
-    flex-shrink: 0;    /* GIFのサイズを維持 */
+    flex: 1 1 150px; /* より柔軟な伸縮 */
+    max-width: 600px; /* 大画面での最大幅 */
 }
 
 .feature-preview img {
@@ -40,11 +40,30 @@
 
 .feature-title {
     color: #2980b9;
-    font-size: 1.2em;
+    font-size: 1.5em;
     margin-bottom: 10px;
+}
+
+.feature-description {
+    color: #404040;
+    font-size: 1em;
+    line-height: 1.5;
 }
 
 .feature-box:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+
+/* タブレット以下のスタイル */
+@media (max-width: 768px) {
+    .feature-box {
+        gap: 15px;
+        padding: 15px;
+    }
+    
+    .feature-content, .feature-preview {
+        flex: 1 1 100%; /* 縦並びに */
+    }
 }

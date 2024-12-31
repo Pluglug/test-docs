@@ -1,4 +1,4 @@
-.. _get_support:
+.. _get-support:
 
 Get Support
 ===========

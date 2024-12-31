@@ -9,7 +9,7 @@
   <title>Terminology &mdash; Pie Menu Editor Fork  documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
-      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=995cffa4" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=74761d4b" />
 
   
       <script src="../_static/jquery.js?v=5d32c60e"></script>
@@ -45,6 +45,7 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/about_pme.html">About PME</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting_started/installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../basic_usage/quick_tutorial.html">Quick Tutorial</a></li>
 </ul>
@@ -65,14 +66,36 @@
 <p class="caption" role="heading"><span class="caption-text">Reference</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Terminology</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#area">Area</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#header">Header</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#keymap">Keymap</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#macro-operator">Macro Operator</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#modal-operator">Modal Operator</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#operator">Operator</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#panel">Panel</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#property">Property</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#blender">Blenderの基本概念</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#area">Area（エリア）</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#context">Context（コンテキスト）</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#header">Header（ヘッダー）</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#keymap">Keymap（キーマップ）</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mode">Mode（モード）</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#operator-bpy-ops">Operator（オペレータ、bpy.ops）</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#panel">Panel（パネル）</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#property">Property（プロパティ）</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#region">Region（領域）</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#pme">PME固有の概念</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#menu">Menu（メニュー）</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#slot">Slot（スロット）</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#command-tab">Command Tab（コマンドタブ）</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#custom-tab">Custom Tab（カスタムタブ）</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#interactive-panels-mode">Interactive Panels Mode（インタラクティブパネルモード）</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#macro-operator">Macro Operator（マクロオペレータ）</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#modal-operator">Modal Operator（モーダルオペレータ）</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#poll-method">Poll Method（ポールメソッド）</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#slot-editor">Slot Editor（スロットエディタ）</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">高度な概念</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#event-system">Event System（イベントシステム）</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#layout-system">Layout System（レイアウトシステム）</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#operator-execution-context">Operator Execution Context（オペレータ実行コンテキスト）</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="pme_scripting_reference/index.html">Scripting</a></li>
@@ -119,38 +142,209 @@
            <div itemprop="articleBody">
              
   <section id="terminology">
-<h1>Terminology<a class="headerlink" href="#terminology" title="Link to this heading"></a></h1>
+<span id="id1"></span><h1>Terminology<a class="headerlink" href="#terminology" title="Link to this heading"></a></h1>
+<section id="blender">
+<h2>Blenderの基本概念<a class="headerlink" href="#blender" title="Link to this heading"></a></h2>
 <section id="area">
-<h2>Area<a class="headerlink" href="#area" title="Link to this heading"></a></h2>
-<p>Area is a workspace for a particular type of editor, like a 3D View Editor, or an Outliner.</p>
+<h3>Area（エリア）<a class="headerlink" href="#area" title="Link to this heading"></a></h3>
+<p>エディタータイプ（3Dビュー、アウトライナーなど）ごとの作業領域です。
+PMEでは、Toggle Side Areaによってエリアの表示/非表示を切り替えることができます。</p>
+<p><strong>関連</strong>: Region（領域）, Window（ウィンドウ）, Workspace（ワークスペース）</p>
+</section>
+<section id="context">
+<h3>Context（コンテキスト）<a class="headerlink" href="#context" title="Link to this heading"></a></h3>
+<p>Blenderの「いま」の状態を表す概念です。次のような情報を含みます：
+- 選択中のオブジェクト
+- 現在の編集モード
+- カーソル位置
+- アクティブなツール</p>
+<blockquote>
+<div><p>and more…</p>
+</div></blockquote>
+<p><strong>例</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># アクティブなオブジェクトの取得</span>
+<span class="n">active_obj</span> <span class="o">=</span> <span class="n">bpy</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">active_object</span>
+<span class="c1"># 現在の編集モードの確認</span>
+<span class="n">current_mode</span> <span class="o">=</span> <span class="n">bpy</span><span class="o">.</span><span class="n">context</span><span class="o">.</span><span class="n">mode</span>
+</pre></div>
+</div>
 </section>
 <section id="header">
-<h2>Header<a class="headerlink" href="#header" title="Link to this heading"></a></h2>
-<p>Header is a small horizontal strip, which sits either at the top or bottom of the area and acts as a container for menus and commonly used tools.</p>
+<h3>Header（ヘッダー）<a class="headerlink" href="#header" title="Link to this heading"></a></h3>
+<p>エリアの上部または下部にある水平のバー領域です。メニューや頻用するツールが配置されています。
+PMEでは:ref:<a href="#id2"><span class="problematic" id="id3">`</span></a>Menu/Panel Extension &lt;pme-menu-panel-extension&gt;`機能を使って、カスタムボタンを追加できます。</p>
+<p><strong>関連</strong>: Region（領域）</p>
 </section>
 <section id="keymap">
-<h2>Keymap<a class="headerlink" href="#keymap" title="Link to this heading"></a></h2>
-<p>A group of context sensitive hotkeys.</p>
+<h3>Keymap（キーマップ）<a class="headerlink" href="#keymap" title="Link to this heading"></a></h3>
+<p>コンテキストに応じて利用可能なホットキーの集合です。エリアタイプや編集モードによって異なるキーマップが適用されます。
+たとえば、Gキーはデフォルトでオブジェクトの移動に割り当てられていますが、スカルプトモードではグラブツールに割り当てられています。</p>
 </section>
-<section id="macro-operator">
-<h2>Macro Operator<a class="headerlink" href="#macro-operator" title="Link to this heading"></a></h2>
-<p>A sequence of user confirmed and succeed operators.</p>
+<section id="mode">
+<h3>Mode（モード）<a class="headerlink" href="#mode" title="Link to this heading"></a></h3>
+<p>Blenderの編集状態を表します（編集モード、オブジェクトモードなど）。利用可能なツールや操作が変化します。
+PMEのPoll機能と組み合わせることで、モードに応じたツールの表示制御が可能です。</p>
+<p><strong>例</strong>: <code class="docutils literal notranslate"><span class="pre">bpy.context.mode</span> <span class="pre">==</span> <span class="pre">'EDIT_MESH'</span></code></p>
 </section>
-<section id="modal-operator">
-<h2>Modal Operator<a class="headerlink" href="#modal-operator" title="Link to this heading"></a></h2>
-<p>An interactive tool that blocks the UI and takes user input to confirm, cancel or adjust an action.</p>
-</section>
-<section id="operator">
-<h2>Operator<a class="headerlink" href="#operator" title="Link to this heading"></a></h2>
-<p>A tool in Blender that performs an action and can be assigned to a hotkey, a button or can be called by a python script.</p>
+<section id="operator-bpy-ops">
+<h3>Operator（オペレータ、bpy.ops）<a class="headerlink" href="#operator-bpy-ops" title="Link to this heading"></a></h3>
+<p>Blenderの機能単位です。以下のような使い方があります：
+- ホットキーへの割り当て
+- メニュー/ボタンへの登録
+- Python Scriptからの呼び出し
+- マクロでの実行</p>
+<p>PMEでは、Macro OperatorやModal Operator Editorを使って、オペレータの実行を組み合わせることができます。</p>
+<p><strong>例</strong>: <code class="docutils literal notranslate"><span class="pre">bpy.ops.mesh.subdivide()</span></code></p>
 </section>
 <section id="panel">
-<h2>Panel<a class="headerlink" href="#panel" title="Link to this heading"></a></h2>
-<p>Panel is a collapsible group of UI widgets.</p>
+<h3>Panel（パネル）<a class="headerlink" href="#panel" title="Link to this heading"></a></h3>
+<p>折りたたみ可能なUIウィジェットのグループです。PMEでは：
+- カスタムパネルの作成
+- 既存パネルの拡張
+- パネルのグループ化
+- 不要なパネルの非表示化
+が可能です。</p>
+<p><strong>関連</strong>: Property（プロパティ）, Region（領域）</p>
 </section>
 <section id="property">
-<h2>Property<a class="headerlink" href="#property" title="Link to this heading"></a></h2>
-<p>Object’s data that can be represented as a UI widget.</p>
+<h3>Property（プロパティ）<a class="headerlink" href="#property" title="Link to this heading"></a></h3>
+<p>オブジェクトのデータで、UIウィジェットとして表示できるものです。PMEでは：
+- メニュー/パネルでの表示
+- カスタムツールでの編集
+- 条件分岐での使用
+などができます。</p>
+<p><strong>例</strong>: <code class="docutils literal notranslate"><span class="pre">bpy.context.object.location</span></code></p>
+</section>
+<section id="region">
+<h3>Region（領域）<a class="headerlink" href="#region" title="Link to this heading"></a></h3>
+<p>エリア内の分割された領域で、特定のUI要素（ツール、プロパティなど）を含みます。PMEのPanel Group機能を使って、カスタムコンテンツを追加できます。</p>
+<p><strong>関連</strong>: Area（エリア）, Panel（パネル）</p>
+</section>
+</section>
+<section id="pme">
+<h2>PME固有の概念<a class="headerlink" href="#pme" title="Link to this heading"></a></h2>
+<section id="menu">
+<h3>Menu（メニュー）<a class="headerlink" href="#menu" title="Link to this heading"></a></h3>
+<p>PMEで作成するカスタマイズ単位です。以下のような種類があります：
+- Pie Menu（パイメニュー）
+- Regular Menu（通常メニュー）
+- Macro Operator（マクロオペレータ）
+- Modal Operator（モーダルオペレータ）
+など</p>
+<p>各メニューは複数のSlotで構成され、それぞれが独立した機能を持ちます。</p>
+</section>
+<section id="slot">
+<h3>Slot（スロット）<a class="headerlink" href="#slot" title="Link to this heading"></a></h3>
+<p>メニュー内の個々の要素です。以下のような設定が可能です：
+- コマンドの実行
+- プロパティの表示/編集
+- サブメニューの呼び出し
+- カスタムレイアウトの描画</p>
+<p><strong>関連</strong>: Command Tab, Property Tab, Menu Tab, Custom Tab</p>
+</section>
+<section id="command-tab">
+<h3>Command Tab（コマンドタブ）<a class="headerlink" href="#command-tab" title="Link to this heading"></a></h3>
+<p>Pythonコードを実行するためのスロットエディタタブです。以下をサポートします：
+- 直接のPythonコマンド実行
+- オペレータの呼び出し
+- カスタム関数の使用
+- 変数操作</p>
+<p><strong>例</strong>: <code class="docutils literal notranslate"><span class="pre">C.active_object.location.x</span> <span class="pre">+=</span> <span class="pre">1.0</span></code></p>
+</section>
+<section id="custom-tab">
+<h3>Custom Tab（カスタムタブ）<a class="headerlink" href="#custom-tab" title="Link to this heading"></a></h3>
+<p>PMEのUIシステムを使用してカスタムウィジェットレイアウトを作成するためのタブです。直接のPythonコーディングなしで複雑なUIを作成できます。</p>
+<p><strong>例</strong>: <code class="docutils literal notranslate"><span class="pre">L.box().label(text=&quot;カスタムレイアウト&quot;)</span></code></p>
+</section>
+<section id="interactive-panels-mode">
+<h3>Interactive Panels Mode（インタラクティブパネルモード）<a class="headerlink" href="#interactive-panels-mode" title="Link to this heading"></a></h3>
+<p>すべてのUI要素にPME Toolsボタンを追加するPMEのモードです。以下が容易になります：
+- メニューIDの取得
+- パネル拡張の設定
+- UIのカスタマイズ</p>
+</section>
+<section id="macro-operator">
+<h3>Macro Operator（マクロオペレータ）<a class="headerlink" href="#macro-operator" title="Link to this heading"></a></h3>
+<p>複数のオペレータを順序通りに実行する機能です。PMEのMacro Operator Editorでは：
+- オペレータシーケンスの記録
+- オペレータパラメータの変更
+- 実行フローの管理
+が可能です。</p>
+</section>
+<section id="modal-operator">
+<h3>Modal Operator（モーダルオペレータ）<a class="headerlink" href="#modal-operator" title="Link to this heading"></a></h3>
+<p>継続的なユーザー入力を処理する対話的なツールです。PMEのModal Operator Editorで作成でき：
+- マウス移動への応答
+- キーイベントの処理
+- リアルタイムフィードバック
+などが実現できます。</p>
+</section>
+<section id="poll-method">
+<h3>Poll Method（ポールメソッド）<a class="headerlink" href="#poll-method" title="Link to this heading"></a></h3>
+<p>メニュー/ツールを利用可能にするかを決定するPython関数です。
+利用できる場合はTrueを返し、利用できない場合はFalseを返す必要があります。</p>
+<p>以下に使用されます：
+- コンテキストに応じたUI要素の表示
+- 条件付きツールの有効化
+- エラー防止</p>
+<p><strong>例</strong>: <code class="docutils literal notranslate"><span class="pre">ao</span> <span class="pre">=</span> <span class="pre">C.active_object;</span> <span class="pre">return</span> <span class="pre">ao</span> <span class="pre">and</span> <span class="pre">ao.type</span> <span class="pre">==</span> <span class="pre">'MESH'</span></code></p>
+</section>
+<section id="slot-editor">
+<h3>Slot Editor（スロットエディタ）<a class="headerlink" href="#slot-editor" title="Link to this heading"></a></h3>
+<p>メニュー/ボタンの動作を定義するPMEの中核インターフェースです。以下のタブを含みます：
+- コマンド実行
+- プロパティ表示
+- メニュー呼び出し
+- ホットキー呼び出し
+- カスタムレイアウト</p>
+</section>
+</section>
+<section id="id4">
+<h2>高度な概念<a class="headerlink" href="#id4" title="Link to this heading"></a></h2>
+<section id="event-system">
+<h3>Event System（イベントシステム）<a class="headerlink" href="#event-system" title="Link to this heading"></a></h3>
+<p>Blenderの入力処理システムです。以下に重要です：
+- モーダルオペレータ
+- カスタムホットキー
+- インタラクティブツール</p>
+<p><strong>例</strong>: <code class="docutils literal notranslate"><span class="pre">event.type</span></code>, <code class="docutils literal notranslate"><span class="pre">event.value</span></code></p>
+</section>
+<section id="layout-system">
+<h3>Layout System（レイアウトシステム）<a class="headerlink" href="#layout-system" title="Link to this heading"></a></h3>
+<p>BlenderのUI作成システムです。PMEでは以下に使用します：
+- カスタムメニュー
+- パネルレイアウト
+- ダイアログ作成</p>
+<p><strong>例</strong>: <code class="docutils literal notranslate"><span class="pre">layout.prop()</span></code>, <code class="docutils literal notranslate"><span class="pre">layout.operator()</span></code></p>
+</section>
+<section id="operator-execution-context">
+<h3>Operator Execution Context（オペレータ実行コンテキスト）<a class="headerlink" href="#operator-execution-context" title="Link to this heading"></a></h3>
+<p>オペレータの実行方法を指定する重要な概念です。主に以下の2つの実行モードがあります：</p>
+<dl class="simple">
+<dt>INVOKE_DEFAULT</dt><dd><p>ユーザーの入力を受け付ける対話的な実行モードです。
+- マウス位置の取得
+- プロパティの対話的な設定
+- モーダル操作の開始
+などが可能です。</p>
+</dd>
+<dt>EXEC_DEFAULT</dt><dd><p>パラメータを直接指定して実行するモードです。
+- スクリプトからの実行
+- マクロでの使用
+- 事前設定された値での実行
+に適しています。</p>
+</dd>
+</dl>
+<p><strong>例</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># マウス操作によってアクティブオブジェクトを移動</span>
+<span class="n">bpy</span><span class="o">.</span><span class="n">ops</span><span class="o">.</span><span class="n">transform</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="s1">&#39;INVOKE_DEFAULT&#39;</span><span class="p">)</span>
+
+<span class="c1"># 直接パラメータを指定してオブジェクトをX軸に移動</span>
+<span class="n">bpy</span><span class="o">.</span><span class="n">ops</span><span class="o">.</span><span class="n">transform</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="s1">&#39;EXEC_DEFAULT&#39;</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="p">(</span><span class="mf">5.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>Reference: <a class="reference external" href="https://docs.blender.org/api/current/bpy.ops.html#execution-context">Execution Context</a>
+<strong>関連</strong>: Operator, Modal Operator, Macro Operator</p>
+</section>
 </section>
 </section>
 

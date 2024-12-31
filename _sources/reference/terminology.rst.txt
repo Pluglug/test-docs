@@ -1,34 +1,228 @@
+﻿.. _terminology:
+
 Terminology
 ===========
 
-Area
-----
-Area is a workspace for a particular type of editor, like a 3D View Editor, or an Outliner.
+Blenderの基本概念
+-----------------
 
-Header
-------
-Header is a small horizontal strip, which sits either at the top or bottom of the area and acts as a container for menus and commonly used tools.
+Area（エリア）
+^^^^^^^^^^^^
+エディタータイプ（3Dビュー、アウトライナーなど）ごとの作業領域です。
+PMEでは、Toggle Side Areaによってエリアの表示/非表示を切り替えることができます。
 
-Keymap
-------
-A group of context sensitive hotkeys.
+**関連**: Region（領域）, Window（ウィンドウ）, Workspace（ワークスペース）
 
-Macro Operator
---------------
-A sequence of user confirmed and succeed operators.
+Context（コンテキスト）
+^^^^^^^^^^^^^^^^^^^^
+Blenderの「いま」の状態を表す概念です。次のような情報を含みます：
+- 選択中のオブジェクト
+- 現在の編集モード
+- カーソル位置
+- アクティブなツール
+ and more...
 
-Modal Operator
---------------
-An interactive tool that blocks the UI and takes user input to confirm, cancel or adjust an action.
+**例**:
 
-Operator
+.. code-block::
+
+    # アクティブなオブジェクトの取得
+    active_obj = bpy.context.active_object
+    # 現在の編集モードの確認
+    current_mode = bpy.context.mode
+
+
+Header（ヘッダー）
+^^^^^^^^^^^^^^^^^
+エリアの上部または下部にある水平のバー領域です。メニューや頻用するツールが配置されています。
+PMEでは:ref:`Menu/Panel Extension <pme-menu-panel-extension>`機能を使って、カスタムボタンを追加できます。
+
+**関連**: Region（領域）
+
+Keymap（キーマップ）
+^^^^^^^^^^^^^^^^^
+コンテキストに応じて利用可能なホットキーの集合です。エリアタイプや編集モードによって異なるキーマップが適用されます。
+たとえば、Gキーはデフォルトでオブジェクトの移動に割り当てられていますが、スカルプトモードではグラブツールに割り当てられています。
+
+Mode（モード）
+^^^^^^^^^^^^
+Blenderの編集状態を表します（編集モード、オブジェクトモードなど）。利用可能なツールや操作が変化します。
+PMEのPoll機能と組み合わせることで、モードに応じたツールの表示制御が可能です。
+
+**例**: ``bpy.context.mode == 'EDIT_MESH'``
+
+Operator（オペレータ、bpy.ops）
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Blenderの機能単位です。以下のような使い方があります：
+- ホットキーへの割り当て
+- メニュー/ボタンへの登録
+- Python Scriptからの呼び出し
+- マクロでの実行
+
+PMEでは、Macro OperatorやModal Operator Editorを使って、オペレータの実行を組み合わせることができます。
+
+**例**: ``bpy.ops.mesh.subdivide()``
+
+Panel（パネル）
+^^^^^^^^^^^^^
+折りたたみ可能なUIウィジェットのグループです。PMEでは：
+- カスタムパネルの作成
+- 既存パネルの拡張
+- パネルのグループ化
+- 不要なパネルの非表示化
+が可能です。
+
+**関連**: Property（プロパティ）, Region（領域）
+
+Property（プロパティ）
+^^^^^^^^^^^^^^^^^^^
+オブジェクトのデータで、UIウィジェットとして表示できるものです。PMEでは：
+- メニュー/パネルでの表示
+- カスタムツールでの編集
+- 条件分岐での使用
+などができます。
+
+**例**: ``bpy.context.object.location``
+
+Region（領域）
+^^^^^^^^^^^^
+エリア内の分割された領域で、特定のUI要素（ツール、プロパティなど）を含みます。PMEのPanel Group機能を使って、カスタムコンテンツを追加できます。
+
+**関連**: Area（エリア）, Panel（パネル）
+
+PME固有の概念
+-----------
+
+Menu（メニュー）
+^^^^^^^^^^^^^
+PMEで作成するカスタマイズ単位です。以下のような種類があります：
+- Pie Menu（パイメニュー）
+- Regular Menu（通常メニュー）
+- Macro Operator（マクロオペレータ）
+- Modal Operator（モーダルオペレータ）
+など
+
+各メニューは複数のSlotで構成され、それぞれが独立した機能を持ちます。
+
+Slot（スロット）
+^^^^^^^^^^^^^
+メニュー内の個々の要素です。以下のような設定が可能です：
+- コマンドの実行
+- プロパティの表示/編集
+- サブメニューの呼び出し
+- カスタムレイアウトの描画
+
+**関連**: Command Tab, Property Tab, Menu Tab, Custom Tab
+
+Command Tab（コマンドタブ）
+^^^^^^^^^^^^^^^^^^^^^^^^
+Pythonコードを実行するためのスロットエディタタブです。以下をサポートします：
+- 直接のPythonコマンド実行
+- オペレータの呼び出し
+- カスタム関数の使用
+- 変数操作
+
+**例**: ``C.active_object.location.x += 1.0``
+
+Custom Tab（カスタムタブ）
+^^^^^^^^^^^^^^^^^^^^^^^
+PMEのUIシステムを使用してカスタムウィジェットレイアウトを作成するためのタブです。直接のPythonコーディングなしで複雑なUIを作成できます。
+
+**例**: ``L.box().label(text="カスタムレイアウト")``
+
+Interactive Panels Mode（インタラクティブパネルモード）
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+すべてのUI要素にPME Toolsボタンを追加するPMEのモードです。以下が容易になります：
+- メニューIDの取得
+- パネル拡張の設定
+- UIのカスタマイズ
+
+Macro Operator（マクロオペレータ）
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+複数のオペレータを順序通りに実行する機能です。PMEのMacro Operator Editorでは：
+- オペレータシーケンスの記録
+- オペレータパラメータの変更
+- 実行フローの管理
+が可能です。
+
+Modal Operator（モーダルオペレータ）
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+継続的なユーザー入力を処理する対話的なツールです。PMEのModal Operator Editorで作成でき：
+- マウス移動への応答
+- キーイベントの処理
+- リアルタイムフィードバック
+などが実現できます。
+
+Poll Method（ポールメソッド）
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+メニュー/ツールを利用可能にするかを決定するPython関数です。
+利用できる場合はTrueを返し、利用できない場合はFalseを返す必要があります。
+
+以下に使用されます：
+- コンテキストに応じたUI要素の表示
+- 条件付きツールの有効化
+- エラー防止
+
+**例**: ``ao = C.active_object; return ao and ao.type == 'MESH'``
+
+Slot Editor（スロットエディタ）
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+メニュー/ボタンの動作を定義するPMEの中核インターフェースです。以下のタブを含みます：
+- コマンド実行
+- プロパティ表示
+- メニュー呼び出し
+- ホットキー呼び出し
+- カスタムレイアウト
+
+高度な概念
 --------
-A tool in Blender that performs an action and can be assigned to a hotkey, a button or can be called by a python script.
 
-Panel
------
-Panel is a collapsible group of UI widgets.
+Event System（イベントシステム）
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Blenderの入力処理システムです。以下に重要です：
+- モーダルオペレータ
+- カスタムホットキー
+- インタラクティブツール
 
-Property
---------
-Object's data that can be represented as a UI widget.
+**例**: ``event.type``, ``event.value``
+
+Layout System（レイアウトシステム）
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+BlenderのUI作成システムです。PMEでは以下に使用します：
+- カスタムメニュー
+- パネルレイアウト
+- ダイアログ作成
+
+**例**: ``layout.prop()``, ``layout.operator()``
+
+Operator Execution Context（オペレータ実行コンテキスト）
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+オペレータの実行方法を指定する重要な概念です。主に以下の2つの実行モードがあります：
+
+INVOKE_DEFAULT
+  ユーザーの入力を受け付ける対話的な実行モードです。
+  - マウス位置の取得
+  - プロパティの対話的な設定
+  - モーダル操作の開始
+  などが可能です。
+
+EXEC_DEFAULT
+  パラメータを直接指定して実行するモードです。
+  - スクリプトからの実行
+  - マクロでの使用
+  - 事前設定された値での実行
+  に適しています。
+
+**例**:
+
+.. code-block::
+
+    # マウス操作によってアクティブオブジェクトを移動
+    bpy.ops.transform.translate('INVOKE_DEFAULT')
+
+    # 直接パラメータを指定してオブジェクトをX軸に移動
+    bpy.ops.transform.translate('EXEC_DEFAULT', value=(5.0, 0.0, 0.0))
+
+
+Reference: `Execution Context <https://docs.blender.org/api/current/bpy.ops.html#execution-context>`_
+**関連**: Operator, Modal Operator, Macro Operator
