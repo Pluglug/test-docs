@@ -224,5 +224,6 @@ EXEC_DEFAULT
     bpy.ops.transform.translate('EXEC_DEFAULT', value=(5.0, 0.0, 0.0))
 
 
-Reference: `Execution Context <https://docs.blender.org/api/current/bpy.ops.html#execution-context>`_
+**Reference**: `Execution Context <https://docs.blender.org/api/current/bpy.ops.html#execution-context>`_
+
 **関連**: Operator, Modal Operator, Macro Operator
