@@ -1,4 +1,4 @@
-.. _pie_menu_editor:
+.. _pie-menu-editor:
 
 Pie Menu Editor
 ===============

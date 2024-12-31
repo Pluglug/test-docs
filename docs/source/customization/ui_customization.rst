@@ -20,5 +20,8 @@ PME Toolbar
 
 (WIP)
 
+.. _pme-menu-panel-extension:
 Menu/Panel Extension
 --------------------
+
+(WIP)
