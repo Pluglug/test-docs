@@ -1,7 +1,3 @@
-.. pie_menu_editor_docs documentation master file, created by
-   sphinx-quickstart on Tue Dec  3 03:15:22 2024.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
 
 .. image:: /_static/images/pme_logo.webp
    :alt: Pie Menu Editor Logo
@@ -16,7 +12,8 @@ The Pie Menu Editor (PME) is an add-on for Blender that allows users to create
 custom menus, dialogs, and various UI elements to streamline their workflow.
 If you have any questions or need help, please visit the :ref:`Support & Community<support-community-index>` section.
 
-.. note:: This is a placeholder document.
+.. note:: 
+   This documentation is a work in progress. If you have any suggestions or feedback, please let me know.
 
 
 .. _feature-overview:
@@ -32,8 +29,8 @@ Feature Overview
                <p class="feature-description">Allows to create nested pie menus with 8+ buttons.</p>
          </a>
          <div class="feature-preview">
-               <a href="https://www.youtube.com/watch?v=COW109EjBsU">
-                  <img src="/_static/images/overview/overview_vid_pie.png" 
+               <a href="https://www.youtube.com/watch?v=COW109EjBsU" target="_blank" rel="noopener noreferrer">
+                  <img src="/_static/images/overview/overview_vid_pie.png"
                         alt="Pie Menu Demo">
                </a>
          </div>
@@ -45,7 +42,7 @@ Feature Overview
                <p class="feature-description">Allows to create multi-column menus which can be called by using the assigned hotkey or used as a sub-menu.</p>
          </a>
          <div class="feature-preview">
-               <a href="https://www.youtube.com/watch?v=bvDADkqMLEw">
+               <a href="https://www.youtube.com/watch?v=bvDADkqMLEw" target="_blank" rel="noopener noreferrer">
                   <img src="/_static/images/overview/overview_vid_menu.png" 
                         alt="Regular Menu Demo">
                </a>
@@ -58,7 +55,7 @@ Feature Overview
                <p class="feature-description">Allows to create a layout of widgets that can be displayed in pie menus, dialogs, panels or toolbars.</p>
          </a>
          <div class="feature-preview">
-               <a href="https://www.youtube.com/watch?v=JdbmDSV9wIU">
+               <a href="https://www.youtube.com/watch?v=JdbmDSV9wIU" target="_blank" rel="noopener noreferrer">
                   <img src="/_static/images/overview/overview_vid_popup.png" 
                         alt="Popup Dialog Demo">
                </a>
@@ -71,7 +68,7 @@ Feature Overview
                <p class="feature-description">Hotkeys can be set to have different actions when pressed or released, which is useful for temporarily activating a tool or mode.</p>
          </a>
          <div class="feature-preview">
-               <a href="https://www.youtube.com/watch?v=pcFOPWnHC7U">
+               <a href="https://www.youtube.com/watch?v=pcFOPWnHC7U" target="_blank" rel="noopener noreferrer">
                   <img src="/_static/images/overview/overview_vid_sticky.png" 
                         alt="Sticky Key Demo">
                </a>
@@ -84,8 +81,10 @@ Feature Overview
                <p class="feature-description">Allows to stack commands and cycle between them using the assigned hotkey.</p>
          </a>
          <div class="feature-preview">
-               <img src="/_static/images/overview/overview_vid_stack.png" 
-                     alt="Stack Key Demo">
+               <a href="https://www.youtube.com/watch?v=4wZKiyKE_P4" target="_blank" rel="noopener noreferrer">
+                  <img src="/_static/images/overview/overview_vid_stack.png" 
+                        alt="Stack Key Demo">
+               </a>
          </div>
       </div>
 
@@ -95,8 +94,10 @@ Feature Overview
                <p class="feature-description">Allows to create new tools using existing Blender tools without coding.</p>
          </a>
          <div class="feature-preview">
-               <img src="/_static/images/overview/overview_vid_macro.png" 
-                     alt="Macro Operator Demo">
+               <a href="https://www.youtube.com/watch?v=x4HhN4aHCxg" target="_blank" rel="noopener noreferrer">
+                  <img src="/_static/images/overview/overview_vid_macro.png" 
+                        alt="Macro Operator Demo">
+               </a>
          </div>
       </div>
 
@@ -106,8 +107,10 @@ Feature Overview
                <p class="feature-description">Allows to create interactive tools.</p>
          </a>
          <div class="feature-preview">
-               <img src="/_static/images/overview/overview_vid_modal.png" 
-                     alt="Modal Operator Demo">
+               <a href="https://youtu.be/aDEX5bix384" target="_blank" rel="noopener noreferrer">
+                  <img src="/_static/images/overview/overview_vid_modal.png" 
+                        alt="Modal Operator Demo">
+               </a>
          </div>
       </div>
 
@@ -117,8 +120,10 @@ Feature Overview
                <p class="feature-description">Allows to create custom properties for objects, materials, and more.</p>
          </a>
          <div class="feature-preview">
-               <img src="/_static/images/overview/overview_vid_property.png" 
-                     alt="Property Editor Demo">
+               <a href="https://youtu.be/xQ-ETd8xacA" target="_blank" rel="noopener noreferrer">
+                  <img src="/_static/images/overview/overview_vid_property.png" 
+                        alt="Property Editor Demo">
+               </a>
          </div>
       </div>
    </div>
