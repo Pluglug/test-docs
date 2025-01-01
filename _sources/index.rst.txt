@@ -30,7 +30,7 @@ Feature Overview
          </a>
          <div class="feature-preview">
                <a href="https://www.youtube.com/watch?v=COW109EjBsU" target="_blank" rel="noopener noreferrer">
-                  <img src="/_static/images/overview/overview_vid_pie.png"
+                  <img src="_static/images/overview/overview_vid_pie.png"
                         alt="Pie Menu Demo">
                </a>
          </div>
@@ -43,7 +43,7 @@ Feature Overview
          </a>
          <div class="feature-preview">
                <a href="https://www.youtube.com/watch?v=bvDADkqMLEw" target="_blank" rel="noopener noreferrer">
-                  <img src="/_static/images/overview/overview_vid_menu.png" 
+                  <img src="_static/images/overview/overview_vid_menu.png" 
                         alt="Regular Menu Demo">
                </a>
          </div>
@@ -56,7 +56,7 @@ Feature Overview
          </a>
          <div class="feature-preview">
                <a href="https://www.youtube.com/watch?v=JdbmDSV9wIU" target="_blank" rel="noopener noreferrer">
-                  <img src="/_static/images/overview/overview_vid_popup.png" 
+                  <img src="_static/images/overview/overview_vid_popup.png" 
                         alt="Popup Dialog Demo">
                </a>
          </div>
@@ -69,7 +69,7 @@ Feature Overview
          </a>
          <div class="feature-preview">
                <a href="https://www.youtube.com/watch?v=pcFOPWnHC7U" target="_blank" rel="noopener noreferrer">
-                  <img src="/_static/images/overview/overview_vid_sticky.png" 
+                  <img src="_static/images/overview/overview_vid_sticky.png" 
                         alt="Sticky Key Demo">
                </a>
          </div>
@@ -82,7 +82,7 @@ Feature Overview
          </a>
          <div class="feature-preview">
                <a href="https://www.youtube.com/watch?v=4wZKiyKE_P4" target="_blank" rel="noopener noreferrer">
-                  <img src="/_static/images/overview/overview_vid_stack.png" 
+                  <img src="_static/images/overview/overview_vid_stack.png" 
                         alt="Stack Key Demo">
                </a>
          </div>
@@ -95,7 +95,7 @@ Feature Overview
          </a>
          <div class="feature-preview">
                <a href="https://www.youtube.com/watch?v=x4HhN4aHCxg" target="_blank" rel="noopener noreferrer">
-                  <img src="/_static/images/overview/overview_vid_macro.png" 
+                  <img src="_static/images/overview/overview_vid_macro.png" 
                         alt="Macro Operator Demo">
                </a>
          </div>
@@ -108,7 +108,7 @@ Feature Overview
          </a>
          <div class="feature-preview">
                <a href="https://youtu.be/aDEX5bix384" target="_blank" rel="noopener noreferrer">
-                  <img src="/_static/images/overview/overview_vid_modal.png" 
+                  <img src="_static/images/overview/overview_vid_modal.png" 
                         alt="Modal Operator Demo">
                </a>
          </div>
@@ -121,7 +121,7 @@ Feature Overview
          </a>
          <div class="feature-preview">
                <a href="https://youtu.be/xQ-ETd8xacA" target="_blank" rel="noopener noreferrer">
-                  <img src="/_static/images/overview/overview_vid_property.png" 
+                  <img src="_static/images/overview/overview_vid_property.png" 
                         alt="Property Editor Demo">
                </a>
          </div>
