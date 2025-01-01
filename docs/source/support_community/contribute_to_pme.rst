@@ -1,3 +1,8 @@
+.. _contribute-to-pme:
+
+Contribute to PME
+=================
+
 Share Your Amazing Custom Menus and Scripts!
 =============================================
 

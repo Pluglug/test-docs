@@ -1,4 +1,4 @@
-.. _editor_common_elements:
+.. _editor-common-elements:
 
 Editor Common Elements
 ======================

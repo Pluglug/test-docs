@@ -1,4 +1,4 @@
-.. _property_editor:
+.. _property-editor:
 
 Property Editor
 ===============

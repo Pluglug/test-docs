@@ -1,4 +1,4 @@
-.. _macro_operator_editor:
+.. _macro-operator-editor:
 
 Macro Operator Editor
 =====================

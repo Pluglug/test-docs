@@ -1,4 +1,4 @@
-.. _regular_menu_editor:
+.. _regular-menu-editor:
 
 Regular Menu Editor
 ===================

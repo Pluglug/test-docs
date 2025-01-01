@@ -3,8 +3,8 @@
     flex-direction: column;
     gap: 15px;
     padding: 20px;
-    width: min(95%, 900px); /* より柔軟な最大幅 */
-    margin: 0 auto;    /* 中央寄せ */
+    width: min(95%, 900px);
+    margin: 0 auto;  /* center */
 }
 
 .feature-box {
@@ -19,16 +19,16 @@
     cursor: pointer;
     text-decoration: none;
     color: inherit;
-    flex-wrap: wrap; /* 小画面で折り返し */
+    flex-wrap: wrap;
 }
 
 .feature-content {
-    flex: 1 1 250px; /* より柔軟な伸縮 */
+    flex: 1 1 250px;
 }
 
 .feature-preview {
-    flex: 1 1 150px; /* より柔軟な伸縮 */
-    max-width: 600px; /* 大画面での最大幅 */
+    flex: 1 1 150px;
+    max-width: 600px;
 }
 
 .feature-preview img {
@@ -46,8 +46,8 @@
 
 .feature-description {
     color: #404040;
-    font-size: 1em;
-    line-height: 1.5;
+    font-size: 0.9em;
+    line-height: 1.25;
 }
 
 .feature-box:hover {
@@ -56,7 +56,7 @@
 }
 
 
-/* タブレット以下のスタイル */
+/* Responsive */
 @media (max-width: 768px) {
     .feature-box {
         gap: 15px;
@@ -64,6 +64,6 @@
     }
     
     .feature-content, .feature-preview {
-        flex: 1 1 100%; /* 縦並びに */
+        flex: 1 1 100%; /* full width */
     }
 }
