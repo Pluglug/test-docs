@@ -1,4 +1,4 @@
-.. _modal_operator_editor:
+.. _modal-operator-editor:
 
 Modal Operator Editor
 ======================

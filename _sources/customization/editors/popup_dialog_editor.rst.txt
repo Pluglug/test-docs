@@ -1,6 +1,6 @@
-.. _popup_dialog_editor:
+.. _popup-dialog-editor:
 
-Popup Dialog Editor
+Pop-up Dialog Editor
 ====================
 
 This section covers the Popup Dialog Editor.

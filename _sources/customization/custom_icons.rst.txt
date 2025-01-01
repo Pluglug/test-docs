@@ -1,4 +1,4 @@
-.. _custom_icons:
+.. _custom-icons:
 
 Custom Icons
 ------------

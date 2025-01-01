@@ -1,14 +1,25 @@
-.. _examples_community_resources:
+.. _examples-community-resources:
 
-Examples and Community Resources
-=================================
+.. _basic-examples:
+Basic Examples
+==============
 
 (WIP)
 
-.. toctree::
-   :maxdepth: 1
+.. _practical-examples:
+Practical Examples
+==================
 
-    basic
-    practical
-    script_collection
-    knowledge_base
+(WIP)
+
+.. _knowledge-base:
+Knowledge Base
+==============
+
+(WIP)
+
+.. _script-collection:
+Script Collection
+=================
+
+(WIP)

@@ -1,143 +1,98 @@
+.. note::
+   This documentation is a community-maintained update of the `original PME documentation <https://archive.blender.org/wiki/2015/index.php/User:Raa/Addons/Pie_Menu_Editor/>`_.
+
+   Check :ref:`contribute-to-docs` to learn how you can help improve this documentation.
+
 
 .. image:: /_static/images/pme_logo.webp
    :alt: Pie Menu Editor Logo
    :align: center
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+----
 
 Welcome to PME Documentation
 ============================
 
-The Pie Menu Editor (PME) is an add-on for Blender that allows users to create 
-custom menus, dialogs, and various UI elements to streamline their workflow.
-If you have any questions or need help, please visit the :ref:`Support & Community<support-community-index>` section.
+Pie Menu Editor (PME) empowers you to reshape Blender's interface to match your creative vision. Through intuitive menu creation and hotkey customization, PME turns your workflow ideas into reality.
 
-.. note:: 
-   This documentation is a work in progress. If you have any suggestions or feedback, please let me know.
+.. include::
+   getting_started/feature_overview.rst
+
+.. note::
+   Your perfect Blender setup is just a few clicks away - no coding required.
+   For those ready to explore Python, PME offers advanced options to extend Blender even further.
+
+----
 
 
-.. _feature-overview:
-Feature Overview
-================
+Maintenance and Support
+----------------------
 
-.. raw:: html
+PME was originally developed by `roaoao <https://github.com/roaoao>`_ in 2016 and is now maintained by the community. 
+We continuously update PME to keep pace with Blender's evolution, implementing new features and fixing bugs.
 
-   <div class="grid-container">
-      <div class="feature-box">
-         <a href="customization/editors/pie_menu_editor.html" class="feature-content">
-               <h2 class="feature-title">Pie Menu Editor</h2>
-               <p class="feature-description">Allows to create nested pie menus with 8+ buttons.</p>
-         </a>
-         <div class="feature-preview">
-               <a href="https://www.youtube.com/watch?v=COW109EjBsU" target="_blank" rel="noopener noreferrer">
-                  <img src="_static/images/overview/overview_vid_pie.png"
-                        alt="Pie Menu Demo">
-               </a>
-         </div>
-      </div>
+.. admonition:: Supporting Sustainable Development
+   :class: note
 
-      <div class="feature-box">
-         <a href="customization/editors/regular_menu_editor.html" class="feature-content">
-               <h2 class="feature-title">Regular Menu Editor</h2>
-               <p class="feature-description">Allows to create multi-column menus which can be called by using the assigned hotkey or used as a sub-menu.</p>
-         </a>
-         <div class="feature-preview">
-               <a href="https://www.youtube.com/watch?v=bvDADkqMLEw" target="_blank" rel="noopener noreferrer">
-                  <img src="_static/images/overview/overview_vid_menu.png" 
-                        alt="Regular Menu Demo">
-               </a>
-         </div>
-      </div>
+   PME's development and maintenance relies primarily on volunteer contributions.
+   Your support through `GitHub Sponsors <https://github.com/sponsors/pluglug>`_ (starting from $1/month)
+   helps make these activities sustainable:
 
-      <div class="feature-box">
-         <a href="customization/editors/popup_dialog_editor.html" class="feature-content">
-               <h2 class="feature-title">Pop-up Dialog Editor</h2>
-               <p class="feature-description">Allows to create a layout of widgets that can be displayed in pie menus, dialogs, panels or toolbars.</p>
-         </a>
-         <div class="feature-preview">
-               <a href="https://www.youtube.com/watch?v=JdbmDSV9wIU" target="_blank" rel="noopener noreferrer">
-                  <img src="_static/images/overview/overview_vid_popup.png" 
-                        alt="Popup Dialog Demo">
-               </a>
-         </div>
-      </div>
+   - Compatibility updates for new Blender versions
+   - Bug fixes and stability improvements
+   - Documentation enhancement and translations
+   - New feature development and UX improvements
 
-      <div class="feature-box">
-         <a href="customization/editors/sticky_key_editor.html" class="feature-content">
-               <h2 class="feature-title">Sticky Key Editor</h2>
-               <p class="feature-description">Hotkeys can be set to have different actions when pressed or released, which is useful for temporarily activating a tool or mode.</p>
-         </a>
-         <div class="feature-preview">
-               <a href="https://www.youtube.com/watch?v=pcFOPWnHC7U" target="_blank" rel="noopener noreferrer">
-                  <img src="_static/images/overview/overview_vid_sticky.png" 
-                        alt="Sticky Key Demo">
-               </a>
-         </div>
-      </div>
+   Your support drives PME's evolution into an even better tool.
 
-      <div class="feature-box">
-         <a href="customization/editors/stack_key_editor.html" class="feature-content">
-               <h2 class="feature-title">Stack Key Editor</h2>
-               <p class="feature-description">Allows to stack commands and cycle between them using the assigned hotkey.</p>
-         </a>
-         <div class="feature-preview">
-               <a href="https://www.youtube.com/watch?v=4wZKiyKE_P4" target="_blank" rel="noopener noreferrer">
-                  <img src="_static/images/overview/overview_vid_stack.png" 
-                        alt="Stack Key Demo">
-               </a>
-         </div>
-      </div>
+----
 
-      <div class="feature-box">
-         <a href="customization/editors/macro_operator_editor.html" class="feature-content">
-               <h2 class="feature-title">Macro Operator Editor</h2>
-               <p class="feature-description">Allows to create new tools using existing Blender tools without coding.</p>
-         </a>
-         <div class="feature-preview">
-               <a href="https://www.youtube.com/watch?v=x4HhN4aHCxg" target="_blank" rel="noopener noreferrer">
-                  <img src="_static/images/overview/overview_vid_macro.png" 
-                        alt="Macro Operator Demo">
-               </a>
-         </div>
-      </div>
+Join the Community
+-----------------
 
-      <div class="feature-box">
-         <a href="customization/editors/modal_operator_editor.html" class="feature-content">
-               <h2 class="feature-title">Modal Operator Editor</h2>
-               <p class="feature-description">Allows to create interactive tools.</p>
-         </a>
-         <div class="feature-preview">
-               <a href="https://youtu.be/aDEX5bix384" target="_blank" rel="noopener noreferrer">
-                  <img src="_static/images/overview/overview_vid_modal.png" 
-                        alt="Modal Operator Demo">
-               </a>
-         </div>
-      </div>
+PME's development and documentation thrive through community collaboration.
+Here's how you can participate:
 
-      <div class="feature-box">
-         <a href="customization/editors/property_editor.html" class="feature-content">
-               <h2 class="feature-title">Property Editor</h2>
-               <p class="feature-description">Allows to create custom properties for objects, materials, and more.</p>
-         </a>
-         <div class="feature-preview">
-               <a href="https://youtu.be/xQ-ETd8xacA" target="_blank" rel="noopener noreferrer">
-                  <img src="_static/images/overview/overview_vid_property.png" 
-                        alt="Property Editor Demo">
-               </a>
-         </div>
-      </div>
-   </div>
+Share and Learn
+^^^^^^^^^^^^^^
+- `Blender Artists Forum`_: Ask questions and share customization examples
+- `GitHub Discussions`_: Propose new features and exchange ideas
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+.. _Blender Artists Forum: http://blenderartists.org/forum/showthread.php?392910
+.. _GitHub Discussions: https://github.com/Pluglug/pie-menu-editor-fork/discussions
 
-Documentation
-=============
+Contribute to Development
+^^^^^^^^^^^^^^^^^^^^^^^
+- `Issue Tracker`_: Report bugs and request features
+- `Pull Requests`_: Improve code and add new features
+- :ref:`contribute-to-pme`: Development participation guidelines
+
+.. _Issue Tracker: https://github.com/Pluglug/pie-menu-editor-fork/issues
+.. _Pull Requests: https://github.com/Pluglug/pie-menu-editor-fork/pulls
+
+Improve Documentation
+^^^^^^^^^^^^^^^^^^
+The :ref:`contribute-to-docs` project welcomes:
+
+- Content review and proofreading
+- Documentation translation
+- Contributions to Examples & Resources
+
+
+.. admonition:: Related Links
+   :class: tip
+
+   - `Blender Artists Forum <http://blenderartists.org/forum/showthread.php?392910>`_
+   - `PME-Fork Repository <https://github.com/pluglug/pie-menu-editor-fork>`_
+   - `PME Docs Repository <https://github.com/pluglug/pme-docs>`_
+   - `Become a Sponsor <https://github.com/sponsors/pluglug>`_
+
+----
 
 .. toctree::
    :maxdepth: 2
    :caption: Getting Started
 
-   getting_started/about_pme
    getting_started/installation
    basic_usage/quick_tutorial
 
@@ -171,13 +126,10 @@ Documentation
    :maxdepth: 2
    :caption: Examples & Resources
 
-   examples/basic
-   examples/practical
-   examples/script_collection
-   examples/knowledge_base
+   examples/index
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Support & Community
 
    support_community/faq
